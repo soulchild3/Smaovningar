@@ -94,7 +94,7 @@ class Program
                 result = true;
             }   //  end of if
             else if (key == ConsoleKey.Escape)
-                Environment.Exit(0);
+                Environment.Exit(0);    //  stänger programmet
             else
                 result = false;
         } while (!result);
