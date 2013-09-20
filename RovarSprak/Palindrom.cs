@@ -19,7 +19,7 @@ class Palindrom
     //  constructor
     public Palindrom(string text)
     {
-        TextOrginal = text;
+        TextOrginal = text.ToLower();
         Baklanges();
         ArOrdetPalindrom();
     }   //  end of Palindrom()

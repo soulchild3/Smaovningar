@@ -23,7 +23,7 @@ class RovarSprakKompiler
     //  constructor
     public RovarSprakKompiler(string ord)
     {
-        RovarOrd = RoversprakKompiler(ord);
+        RovarOrd = RoversprakKompiler(ord.ToLower());
         SvenskaOrd = SvensksprakKompiler(RovarOrd);
     }   //  end of RovarSprakKompiler()
     //  end of constructor
