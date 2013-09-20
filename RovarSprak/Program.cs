@@ -19,6 +19,7 @@ class Program
     //  constructor
     static void Main(string[] args)
     {
+        UserInformation();
         do
         {
             Utseende();
@@ -40,7 +41,6 @@ class Program
     {
         Console.Title = "Systemutvecklare: Småövningar";
         Console.SetWindowSize(73, 37);
-        Console.ForegroundColor = ConsoleColor.Cyan;
     }   //  end of Utseende()
 
     static void Kalender()
@@ -100,6 +100,22 @@ class Program
         } while (!result);
         return result;
     }   //  end of Run()
+
+    static void UserInformation()
+    {
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.Write("\n\n\t\tSkriv in ditt username: ");
+        Console.ForegroundColor = ConsoleColor.Red;
+        string username = Console.ReadLine();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        if (username != Environment.UserName)
+        {
+            Console.Write("\n\t\t" + username + " är idot!\n\tRätt username är " + Environment.UserName);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.SetCursorPosition(8, 20);
+            Environment.Exit(0);
+        }
+    }  //  end of UserIformation()
     //  end of methoder
 }
 
